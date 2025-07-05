@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+       
+       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Inter&family=Poppins:wght@700;700&family=Roboto:wght@500;700&display=swap');
+
+       *
+{
+    font-family: 'poppins';
+}
+        body {
+            font-family: "Kanit", sans-serif;
+            margin: 0;
+            /* padding: 20px; */
+            /* border:2px solid black; */
+            /* width: 60vw; */
+            /* height: 60vh; */
+            margin: auto;
+            /* background-color: rgb(199, 178, 152); */
+            /* background: url(LearNexus-removebg-preview.png); */
+            /* background: linear-gradient(49deg, rgb(200, 200, 241), rgb(204, 204, 239), rgb(229, 229, 237)); */
+            background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
+            /* background-repeat: no-repeat; */
+            /* background-size: cover; */
+        }
+        .container
+        {
+            /* display:flex; */
+            /* border:5px solid rgb(112, 147, 234); */
+            box-shadow: 0px 2px 4px 0px rgba(75, 74, 74, 0.598);
+            width:60vw;
+            height:100vh;
+            margin-left:350px;
+            background-color:white;
+            border-radius: 10px;
+            padding:15px;
+            border: none;
+            margin-top: 30px;
+            margin: 20px auto 10px;
+            
+            
+
+            /* height:60vh; */
+        }
+
+        /* height:500px; */
+        /* overflow:none; */
+        /* border: 2px solid blue; */
+
+
+        .question {
+            margin-bottom: 10px;
+            /* border:2px solid red; */
+            font-size: 13px;
+            font-weight: 500;
+
+        }
+p
+{
+font-weight:600;
+}
+
+        #score {
+            display: flex;
+            justify-content: center;
+            margin-top: -50%;
+            position: relative;
+           right:280px;
+            font-size: 30px;
+            box-shadow: 0px 1px 1px rgb(73, 71, 71);
+            /* border: 3px solid red; */
+            width: 320px;
+        
+            text-align: center;
+            margin-left: 550px;
+            border-radius: 4px;
+            background: rgb(50, 101, 190);
+            /* transition: allow-discrete 1s 3s sliding-vertically ease-in; Transition for all properties over 0.5 seconds */
+        }
+
+
+        #btn  {
+            text-align: center;
+            position: absolute;
+            left:39%;
+top:730px;
+            bottom:5px;
+            height: 38px;
+            width: 170px;
+            font-size: 17px;
+            margin-top: -15px;
+            font-weight: 700;
+            border-radius: 4px;
+            color:rgb(229, 229, 229);
+             background-color:rgb(33, 59, 127) ;
+             box-sizing: border-box;
+             box-shadow: 0px 2px 4px 0px rgba(44, 44, 44, 0.598);
+            cursor: pointer;
+            border: none;
+            margin: auto;
+margin-right:80px;
+        }
+
+        #btn:hover {
+            background-color: rgb(44, 80, 172);
+        }
+        .navbar
+        {
+            /* position:absolute; */
+            height:60px;
+            background-color: white;
+            box-shadow: 0px 2px 4px 0px rgba(96, 96, 96, 0.686);
+        }
+        .navbar img{
+            height:300px;
+            width:300px;
+            position:relative;
+            top:-100px;
+            left:40%;
+            
+        }
+       
+        input
+        {
+            margin-bottom: 5px;
+        }
+        #resetBtn
+        {
+            text-align: center;
+            position: absolute;
+            left:53%;
+            top:730px;
+            bottom:5px;
+            height: 38px;
+            width: 170px;
+            font-size: 17px;
+            margin-top: -15px;
+            font-weight: 700;
+            border-radius: 4px;
+            color:rgb(229, 229, 229);
+             background-color:rgb(33, 59, 127) ;
+             box-sizing: border-box;
+             box-shadow: 0px 2px 4px 0px rgba(44, 44, 44, 0.598);
+            cursor: pointer;
+            border: none;
+            margin: auto;
+        }
+        #resetBtn:hover
+        {
+            background-color: rgb(44, 80, 172);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar"><img src="LearNexus-removebg-preview.png" alt=""></nav>
+    <div class="container">
+        <div class="question">
+            <p>1. What does HTML stand for?</p>
+            <input type="radio" name="q1" value="a"> a) Hyper Text Markup Language<br>
+            <input type="radio" name="q1" value="b"> b) Hyperlinks and Text Markup Language<br>
+            <input type="radio" name="q1" value="c"> c) Home Tool Markup Language<br>
+        </div>
+        <hr>
+        <div class="question">
+            <p>2. Which tag is used to link an external CSS file to an HTML document?</p>
+            <input type="radio" name="q2" value="a"> a) &lt;script&gt;<br>
+            <input type="radio" name="q2" value="b"> b) &lt;link&gt;<br>
+            <input type="radio" name="q2" value="c"> c) &lt;style&gt;<br>
+        </div>
+        <hr>
+        <div class="question">
+            <p>3. What does CSS stand for?</p>
+            <input type="radio" name="q3" value="a"> a) Cascading Style Sheets<br>
+            <input type="radio" name="q3" value="b"> b) Creative Style Sheets<br>
+            <input type="radio" name="q3" value="c"> c) Computer Style Sheets<br>
+        </div>
+        <hr>
+        <div class="question">
+            <p>4. How do you declare a variable in JavaScript?</p>
+            <input type="radio" name="q4" value="a"> a) var myVariable;<br>
+            <input type="radio" name="q4" value="b"> b) variable myVariable;<br>
+            <input type="radio" name="q4" value="c"> c) let myVariable;<br>
+        </div>
+        <hr>
+        <div class="question">
+            <p>5. Which CSS property is used to change the text color of an element?</p>
+            <input type="radio" name="q5" value="a"> a) color<br>
+            <input type="radio" name="q5" value="b"> b) background-color<br>
+            <input type="radio" name="q5" value="c"> c) font-color<br>
+        </div>
+        
+        <div id="score"></div>
+    </div>
+  
+    <button onclick="checkAnswers()" id="btn">Submit</button>
+    <button type="button" id="resetBtn">Reset</button>
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            const answers = ['a', 'b', 'a', 'a', 'a']; 
+
+            for (let i = 1; i <= 5; i++) {
+                const selectedAnswer = document.querySelector(`input[name=q${i}]:checked`);
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === answers[i - 1]) {
+                        score++;
+                    }
+                }
+            }
+
+            const scoreDisplay = document.getElementById('score');
+            scoreDisplay.innerHTML = `Your score is: ${score}/5`;
+        }
+
+        document.getElementById('resetBtn').addEventListener('click', function() {
+            // Reset the form
+            document.querySelectorAll('input[type="radio"]').forEach(radio => radio.checked = false);
+            // Clear the score display
+            document.getElementById('score').innerHTML = '';
+        });
+    </script>
+</body>
+
+</html>

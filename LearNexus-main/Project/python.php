@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_content.css">
+</head>
+
+<body>
+ <div class="h1">
+        <img src="LearNexus-removebg-preview.png" alt="logo" id="logo">
+        <?php
+        // Start the session
+        session_start();
+        
+        // Check if the user is logged in
+        if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+            // If logged in, redirect to majorproj.html
+            echo '<a href="majorproj.html"><button>Home</button></a>';
+        } else {
+            // If not logged in, redirect to minorproj.html
+            echo '<a href="minorproj.html"><button>Home</button></a>';
+        }
+        ?>
+    </div><div class="bdy">
+        <div class="lftmrgn">
+            <ul>
+                <a href="#" class="active" id="active"><li id="subsc"><p style="font-size:30px"> 🧾INDEX🧾</p><span id="boom"><img src="pen.png"  width="30" height="40"></span> </li> </a>
+
+                <a href="#pt">
+                    <li>Python Tutorial</li>
+                </a>
+                <a href="#pd">
+                    <li>Python Data Types</li>
+                </a>
+                <a href="#po">
+                    <li>Python Operators</li>
+                </a>
+                <a href="#pc">
+                    <li>Python Conditional Statements</li>
+                </a>
+                <a href="#pl">
+                    <li>Python Loops</li>
+                </a>
+                <a href="#pf">
+                    <li>Python Functions</li>
+                </a>
+            </ul>
+        </div>
+
+
+        <div class="cntnt">
+            <span
+                style="text-align: center; display:flex; align-items: center; justify-content: center; font-size: 30px;font-weight: 500; color:#2c7da0">What
+                is Python?</span><br>Python is a high-level, general-purpose, and very popular programming language.
+            Python programming language (latest Python 3) is being used in web development, and Machine Learning
+            applications, along with all cutting-edge technology in Software Industry. Python language is being used by
+            almost all tech-giant companies like – Google, Amazon, Facebook, Instagram, Dropbox, Uber… etc.
+            <br><br>
+
+
+            <img src="https://logos-world.net/wp-content/uploads/2021/10/Python-Logo.png" alt="" id="frstpic"
+                style="border-radius:4px;">
+            <br>
+            <br>
+
+
+            <span
+                style="text-align: center; display:flex; align-items: center; justify-content: center; font-size: 30px;font-weight: 500; color:#2c7da0" id="pt">Getting
+                started with Python Programming </span><br>
+            Welcome to the Python tutorial section! Here, we’ll cover the essential elements you need to kickstart your
+            journey in Python programming. From syntax and keywords to comments, variables, and indentation, we will
+            explore the foundational concepts that underpin Python development.
+            <ul>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Learn Python Basics</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Syntax</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Keywords in Python</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Comments in Python</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Learn Python Variables</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Learn Python Data Types</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Indentation and why is it important on
+                            Python</span></a></li>
+            </ul>
+            <br><br>
+
+
+            <span
+                style="text-align: center; display:flex; align-items: center; justify-content: center; font-size: 30px;font-weight: 500; color:#2c7da0">Learn
+                Python Input/Output </span><br>
+            In this segment, we delve into the fundamental aspects of handling input and output operations in Python,
+            crucial for interacting with users and processing data effectively. From mastering the versatile print()
+            function to exploring advanced formatting techniques and efficient methods for receiving user input, this
+            section equips you with the necessary skills to harness Python’s power in handling data streams seamlessly.
+            <ul>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Python print() function</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">f-string in Python</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Print without newline in Python</span></a>
+                </li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Python | end parameter in
+                            print()</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Python | sep parameter in
+                            print()</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Python | Output Formatting</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Taking Input in Python</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Taking Multiple Inputs from users in
+                            Python
+                        </span></a></li>
+
+            </ul>
+            <br><br>
+
+
+            <span
+                style="text-align: center; display:flex; align-items: center; justify-content: center; font-size: 30px;font-weight: 500; color:#2c7da0" id="pd">Python
+                Data Types </span><br>
+            Python offers, enabling you to manipulate and manage data with precision and flexibility. Additionally,
+            we’ll delve into the dynamic world of data conversion with casting, and then move on to explore the
+            versatile collections Python provides, including lists, tuples, sets, dictionaries, and arrays.
+            <ul>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Python print() function</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">f-string in Python</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Print without newline in Python</span></a>
+                </li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Python | end parameter in
+                            print()</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Python | sep parameter in
+                            print()</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Python | Output Formatting</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Taking Input in Python</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Taking Multiple Inputs from users in
+                            Python
+                        </span></a></li>
+
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20191023173512/Python-data-structure.jpg"
+                    alt="" style="width:500px;margin-left:120px;margin-top:50px;" id="frstpic">
+
+            </ul>
+            <br><br>
+
+
+            <span
+                style="text-align: center; display:flex; align-items: center; justify-content: center; font-size: 30px;font-weight: 500; color:#2c7da0"id="po">Learn
+                Python Operators</span><br>
+                From performing basic arithmetic operations to evaluating complex logical expressions, we’ll cover it all. We will delve into comparison operators for making decisions based on conditions, and then explore bitwise operators for low-level manipulation of binary data. Additionally, we will unravel the intricacies of assignment operators for efficient variable assignment and updating. Lastly, we will demystify membership and identity operators, such as in and is, enabling you to test for membership in collections and compare object identities with confidence.
+            <ul>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Arithmetic operators</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Comparison Operators</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Logical Operators</span></a>
+                </li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Bitwise Operators</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Assignment Operators</span></a></li>
+                <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Membership & Identity Operators | Python “in”, and “is” operator</span></a></li>
+                </span>
+
+            </ul>
+            <br><br>
+
+            <span
+            style="text-align: center; display:flex; align-items: center; justify-content: center; font-size: 30px;font-weight: 500; color:#2c7da0"id="pc">Python Conditional Statement</span><br>
+            These statements are pivotal in programming, enabling dynamic decision-making and code branching. In this section of Python Tutorial, we’ll explore Python’s conditional logic, from basic if…else statements to nested conditions and the concise ternary operator. We’ll also introduce the powerful match case statement, new in Python 3.10. By the end, you’ll master these constructs, empowering you to write clear, efficient code that responds intelligently to various scenarios. Let’s dive in and unlock the potential of Python’s conditional statements.
+        <ul>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">If-else</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Nested-If statement</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Ternary Condition in Python</span></a>
+            </li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Match Case Statement</span></a></li>
+            </span>
+
+        </ul>
+        <br><br>
+
+
+        <span
+            style="text-align: center; display:flex; align-items: center; justify-content: center; font-size: 30px;font-weight: 500; color:#2c7da0" id="pl">Python Loops</span><br>
+            Here, we’ll explore Python’s loop constructs, including the for and while loops, along with essential loop control statements like break, continue, and pass. Additionally, we’ll uncover the concise elegance of list and dictionary comprehensions for efficient data manipulation. By mastering these loop techniques, you’ll streamline your code for improved readability and performance.
+        <ul>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">For Loop</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">While Loop</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Loop control statements (break,continue,pass)</span></a>
+            </li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Python List Comprehension</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Python Dictionary Comprehension</span></a></li>
+            </span>
+
+        </ul>
+        <br><br>
+
+
+        <span
+            style="text-align: center; display:flex; align-items: center; justify-content: center; font-size: 30px;font-weight: 500; color:#2c7da0"id="pf">Python Functions</span><br>
+            Functions are the backbone of organized and efficient code in Python. Here, we’ll explore their syntax, parameter handling, return values, and variable scope. From basic concepts to advanced techniques like closures and decorators. Along the way, we’ll also introduce versatile functions like range(), and powerful tools such as *args and **kwargs for flexible parameter handling. Additionally, we’ll delve into functional programming with map, filter, and lambda functions.
+        <ul>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Python Function syntax</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Arguments and Return Values in Python Function</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Python Function Global and Local Scope Variables</span></a>
+            </li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Use of pass Statement in Function
+            </span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Return statement in Python Function</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Python range() function</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">*args and **kwargs in Python Function</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Python closures</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Python ‘Self’ as Default Argument</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Decorators in Python</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Python closures</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Map Function</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Filter Function</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Reduce Function</span></a></li>
+            <li><a href="#"><span style="font-weight: 600; color:#2c7da0">Lambda Function</span></a></li>
+
+            </span>
+
+        </ul>
+        <br><br>
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>

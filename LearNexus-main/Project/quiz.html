@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratyush Web Dev</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            font-family: "Kanit", sans-serif;
+            margin: 0;
+            /* padding: 20px; */
+            /* border:2px solid black; */
+            /* width: 60vw; */
+            /* height: 60vh; */
+            margin: auto;
+            /* background-color: rgb(199, 178, 152); */
+            /* background: url(LearNexus-removebg-preview.png); */
+            /* background: linear-gradient(49deg, rgb(200, 200, 241), rgb(204, 204, 239), rgb(229, 229, 237)); */
+            background-color: aliceblue;
+
+            /* background-repeat: no-repeat; */
+            /* background-size: cover; */
+        }
+        .container
+        {
+            /* display:flex; */
+            /* border:5px solid rgb(112, 147, 234); */
+            box-shadow: 0px 2px 1px rgb(73, 71, 71);
+            width:60vw;
+            height:79vh;
+            margin-left:350px;
+            background-color:rgb(220, 218, 218) ;
+            border-radius: 6px;
+            /* height:60vh; */
+        }
+
+        /* height:500px; */
+        /* overflow:none; */
+        /* border: 2px solid blue; */
+
+
+        .question {
+            margin-bottom: 10px;
+            /* border:2px solid red; */
+            font-size: 12px;
+
+        }
+
+        #score {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 30px;
+            box-shadow: 0px 1px 1px rgb(73, 71, 71);
+           
+            /* border: 3px solid red; */
+            width: 720px;
+            margin-left: 200px;
+            border-radius: 4px;
+            background: linear-gradient(20deg,rgb(151, 151, 213),rgb(190, 190, 234),rgb(255, 255, 255));
+            /* transition: allow-discrete 1s 3s sliding-vertically ease-in; Transition for all properties over 0.5 seconds */
+        }
+
+
+        #btn {
+            text-align: center;
+            margin-left: 350px;
+            height: 38px;
+            width: 170px;
+            font-size: 17px;
+            font-weight: 700;
+            border-radius: 4px;
+             background-color:rgb(152, 176, 236) ;
+             box-shadow: 0px 1px 1px rgb(73, 71, 71);
+            cursor: pointer;
+            border: none;
+        }
+
+        #btn:hover {
+            background-color: rgb(209, 237, 230);
+        }
+        .navbar
+        {
+            /* position:absolute; */
+            height:80px;
+            box-shadow: 0px 3px 3px gray;
+        }
+        .navbar img{
+            position: relative;
+            bottom:180px;
+            left:500px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar"><img src="LearNexus-removebg-preview.png" alt=""></nav>
+    <div class="container">
+        <div class="question">
+            <p>1. What does HTML stand for?</p>
+            <input type="radio" name="q1" value="a"> a) Hyper Text Markup Language<br>
+            <input type="radio" name="q1" value="b"> b) Hyperlinks and Text Markup Language<br>
+            <input type="radio" name="q1" value="c"> c) Home Tool Markup Language<br>
+        </div>
+        <hr>
+        <div class="question">
+            <p>2. Which tag is used to link an external CSS file to an HTML document?</p>
+            <input type="radio" name="q2" value="a"> a) &lt;script&gt;<br>
+            <input type="radio" name="q2" value="b"> b) &lt;link&gt;<br>
+            <input type="radio" name="q2" value="c"> c) &lt;style&gt;<br>
+        </div>
+        <hr>
+        <div class="question">
+            <p>3. What does CSS stand for?</p>
+            <input type="radio" name="q3" value="a"> a) Cascading Style Sheets<br>
+            <input type="radio" name="q3" value="b"> b) Creative Style Sheets<br>
+            <input type="radio" name="q3" value="c"> c) Computer Style Sheets<br>
+        </div>
+        <hr>
+        <div class="question">
+            <p>4. How do you declare a variable in JavaScript?</p>
+            <input type="radio" name="q4" value="a"> a) var myVariable;<br>
+            <input type="radio" name="q4" value="b"> b) variable myVariable;<br>
+            <input type="radio" name="q4" value="c"> c) let myVariable;<br>
+        </div>
+        <hr>
+        <div class="question">
+            <p>5. Which CSS property is used to change the text color of an element?</p>
+            <input type="radio" name="q5" value="a"> a) color<br>
+            <input type="radio" name="q5" value="b"> b) background-color<br>
+            <input type="radio" name="q5" value="c"> c) font-color<br>
+        </div>
+        <hr>
+        <div id="score"></div>
+    </div>
+    <hr>
+    <button onclick="checkAnswers()" id="btn">Submit</button>
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            const answers = ['a', 'b', 'a', 'a', 'a']; 
+
+            for (let i = 1; i <= 5; i++) {
+                const selectedAnswer = document.querySelector(`input[name=q${i}]:checked`);
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === answers[i - 1]) {
+                        score++;
+                    }
+                }
+            }
+
+            const scoreDisplay = document.getElementById('score');
+            scoreDisplay.innerHTML = `Your score is: ${score}/5`;
+        }
+    </script>
+</body>
+
+</html>

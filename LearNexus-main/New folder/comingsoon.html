@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coming soon </title>
+   
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+.sec1
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+img{
+    height:250px;
+    width:200px;
+}
+.panda {
+    /*position: fixed;
+    bottom: 20px;
+    right: 20px;*/
+    font-size: 200px;
+    position: absolute;
+    top:80px;
+    cursor: pointer;
+    animation: movePanda 1s infinite alternate;
+    
+}
+
+@keyframes movePanda {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-30px);
+    }
+}
+#csoon{
+    font-size: 32px;
+    box-shadow: 0px 4px 7px -2px rgba(53, 53, 54, 0.516) ;
+    border-radius: 5px;
+    padding:3px;
+    width:50%;
+    display:flex;
+    justify-content: center;
+    margin-top:400px;
+    font-family: 'poppins';
+    font-weight: 600;
+    margin-left:5px;
+    color:#ffffff ;
+    animation-name: pr6;
+    /*animation-duration:2.7s;
+    animation-iteration-count:infinite ;
+    animation-timing-function: ease-in-out;*/
+    background-color: deepskyblue;
+    
+}
+@keyframes pr6
+{
+    
+ 0%{
+    background-color: deepskyblue;
+    transform: scale(1.1);
+ }
+
+ 50%
+ {
+    background-color:deeorange;
+   transform: scale(1);
+ }
+ 100%{
+    background-color:deepskyblue;
+    transform: scale(1.1);
+ }
+
+ 
+
+
+}
+.head
+{
+    font-size: 25px;
+    font-family: 'poppins';
+    border-bottom: 2px solid black;
+    display: inline;
+    font-weight: 600;
+    
+}
+.head:hover
+{
+    cursor: pointer;
+    color:rgb(24, 89, 224);
+    border-bottom: 2px solid rgb(24, 89, 224);
+}
+@media screen and (max-width:1000px) {
+    #csoon
+    {
+        padding:5px;
+        margin:auto;
+        height:50px;
+        font-size: 22px;
+      position:relative;
+        top:400px;
+        width:360px;
+        font-size: 25px;
+        font-weight: 600;
+        height:40px;
+        text-align: center;
+    }
+    .head
+{   
+    font-size: 19px;
+    font-family: 'poppins';
+    border-bottom: 2px solid rgb(24, 89, 224);
+    display: flex;
+    justify-content: center;
+   align-items: center;
+    
+}
+.panda{
+    top:120px;
+}
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="head">Lear<span style="color:rgb(252, 231, 42); font-size: 30px;">N</span>exus</div>
+    <div class="sec1">
+        <div class="panda">
+           <img src="funpanda.jpg" alt=""> </div>
+            <div id="csoon">COMING SOON...</div>
+    </div>
+
+    
+</body>
+</html>

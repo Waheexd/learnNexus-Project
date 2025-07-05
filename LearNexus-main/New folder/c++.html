@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Programming</title>
+   <link rel="stylesheet" href="style_content.css">
+</head>
+
+<body>
+    <div class="h1"><img src="LearNexus-removebg-preview.png" alt="logo" id="logo">  <a href="minorproj.html"><button>Home</button></a> </div>
+   
+    <div class="bdy">
+        <div class="lftmrgn">
+            <ul>
+              <a href="#" class="active" id="active"> <li id="subsc"> Download Pdf <span id="boom">⬇</span> </li> </a>
+               <a href="#" class="active" id="active"> <li> What is C++</li></a>
+               <a href="#bsc" class="active" id="active"> <li>Basic Code </li></a>
+               <a href="#tog" class="active" id="active"> <li> Variables in C++</li></a>
+               <a href="#aog" class="active" id="active"> <li> Data Types in C++</li></a>
+               <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://documents.uow.edu.au/~akheng/WORKSHOP/C%2B%2B%2520Course%2520Notes.pdf&ved=2ahUKEwjRsZrbyryFAxWKV2wGHeaIDPAQFnoECBkQAQ&usg=AOvVaw3LnEz2_uSfjT_Gw1nRp5sQ" target="_blank"> <li> Download pdf<li></a>
+
+               
+            </ul>
+        </div>
+
+      <div class="cntnt"> 
+        <span style="text-align: center; display:flex; align-items: center; justify-content: center; font-size: 30px;font-weight: 500; color:#2c7da0"> Introduction To C++</span>
+
+  
+        C++ is the most used and most popular programming language developed by Bjarne Stroustrup. C++ is a high-level and object-oriented programming language. This language allows developers to write clean and efficient code for large applications and software development, game development, and operating system programming. It is an expansion of the C programming language to include Object Oriented Programming(OOPs) and is used to develop programs for computers. This C++ Tutorial will cover all the basic to advanced topics of C++ like C++ basics, C++ functions, C++ classes, OOPs and STL concepts. <br><br>
+        <div class="sec2"><div class="hdng1">What is C++?</div>
+        C++ is a most popular cross-platform programming language which is used to create high-performance applications and software like OS, Games, E-commerce software, etc. It was developed by Bjarne Stroustrup, as an extension of C language. C++ give a high level of control over system resources and memory.<br><br>
+<!-- New para  -->
+        C++ is a general-purpose programming language that was developed as an enhancement of the C language to include object-oriented paradigm. It is an imperative and a compiled language. <br><br>
+      <ul>
+        <li>C++ is a high-level, general-purpose programming language designed for system and application programming. It was developed by Bjarne Stroustrup at Bell Labs in 1983 as an extension of the C programming language. C++ is an object-oriented, multi-paradigm language that supports procedural, functional, and generic programming styles.</li>
+        <li>One of the key features of C++ is its ability to support low-level, system-level programming, making it suitable for developing operating systems, device drivers, and other system software. At the same time, C++ also provides a rich set of libraries and features for high-level application programming, making it a popular choice for developing desktop applications, video games, and other complex applications.</li>
+        <li>C++ has a large, active community of developers and users, and a wealth of resources and tools available for learning and using the language. Some of the key features of C++ include:</li>
+        <li>Object-Oriented Programming: C++ supports object-oriented programming, allowing developers to create classes and objects and to define methods and properties for these objects.</li>
+        <li>Templates: C++ templates allow developers to write generic code that can work with any data type, making it easier to write reusable and flexible code.</li>
+        <li>Standard Template Library (STL): The STL provides a wide range of containers and algorithms for working with data, making it easier to write efficient and effective code.</li>
+        <li>Exception Handling: C++ provides robust exception handling capabilities, making it easier to write code that can handle errors and unexpected situations.</li>
+    </ul>
+    Overall, C++ is a powerful and versatile programming language that is widely used for a range of applications and is well-suited for both low-level system programming and high-level application development.<br><br>
+   <img src="   https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230703144619/CPP-Language.png" alt="" id="frstpic">
+    
+    
+
+    <span style="text-align: center; display:flex; align-items: center; justify-content: center; font-size: 30px;font-weight: 500; color:#2c7da0" id="ag"> Basic Programs of C++</span>
+
+    <!-- ----------------------------section 2----------------------------------------------------- -->
+
+    <div class="sec2"><div class="hdng1" id="bsc">Printing "Hello World"</div>
+        
+    // C++ program to display "Hello World"<br><br>
+
+    // Header file for input output functions<br><br>
+    #include <iostream><br><br>
+    using namespace std;<br><br>
+    
+    // Main() function: where the execution of<br><br>
+    // program begins<br><br>
+    int main()<br><br>
+    {<br><br>
+        // Prints hello world<br><br>
+        cout << "Hello World";<br><br>
+    
+        return 0;<br><br>
+    }<br><br>
+
+    <div class="sec2"><div class="hdng1" id="tog">Variable in C++</div>
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220830172742/InitilizationofaVariable-660x330.png" alt=""><br><br>
+    Variables in C++ is a name given to a memory location. It is the basic unit of storage in a program. The value stored in a variable can be changed during program execution.<br><br>
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220830122759/VariablesinC-660x330.jpg" alt="">
+    
+        <!-- -------------------------------------------------------Types------------------------------------- -->
+        <div class="sec2"><div class="hdng1">Difference Between Variable Declaration and Definition</div>
+        // C++ program to show difference between<br><br>
+        // definition and declaration of a <br><br>
+        // variable<br><br>
+        #include <iostream><br><br>
+        using namespace std;<br><br>
+        
+        int main()<br><br>
+        {
+            // this is declaration of variable a<br><br>
+            int a;<br><br>
+        
+            // this is initialisation of a<br><br>
+            a = 10;<br><br>
+        
+            // this is definition = declaration + initialisation<br><br>
+            int b = 20;<br><br>
+        
+            // declaration and definition<br><br>
+            // of variable 'a123'<br><br>
+            char a123 = 'a';<br><br>
+        
+            // This is also both declaration and definition<br><br>
+            // as 'c' is allocated memory and<br><br>
+            // assigned some garbage value.<br><br>
+            float c;<br><br>
+        
+            // multiple declarations and definitions<br><br>
+            int _c, _d45, e;<br><br>
+        
+            // Let us print a variable<br><br>
+            cout << a123 << endl;<br><br>
+        
+            return 0;<br><br>
+        }<br><br>
+        
+<!-- --------------------------------------------------------Application of geo------------------------------------- -->
+<div class="sec2"><div class="hdng1" id="aog">C++ Data Types</div>
+       
+All variables use data type during declaration to restrict the type of data to be stored. Therefore, we can say that data types are used to tell the variables the type of data they can store. Whenever a variable is defined in C++, the compiler allocates some memory for that variable based on the data type with which it is declared. Every data type requires a different amount of memory. <br><br>
+
+C++ supports a wide variety of data types and the programmer can select the data type appropriate to the needs of the application. Data types specify the size and types of values to be stored. However, storage representation and machine instructions to manipulate each data type differ from machine to machine, although C++ instructions are identical on all machines.<br><br>       
+
+C++ supports the following data types:       
+<ul>
+    <li><span style="font-weight: 600;">Primary or Built-in or Fundamental data type</span></li>
+    <li><span style="font-weight: 600;">Derived data types</span></li>
+    <li><span style="font-weight: 600;">User-defined data types</span></li>
+
+</ul>
+       <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191113115600/DatatypesInC.png" alt="">
+       // C++ Program to Demonstrate the correct size<br><br>
+// of various data types on your computer.<br><br>
+#include <iostream><br><br>
+using namespace std;<br><br>
+
+int main()<br><br>
+{
+	cout << "Size of char : " << sizeof(char) << endl;<br><br>
+	cout << "Size of int : " << sizeof(int) << endl;<br><br>
+
+	cout << "Size of long : " << sizeof(long) << endl;<br><br>
+	cout << "Size of float : " << sizeof(float) << endl;<br><br>
+
+	cout << "Size of double : " << sizeof(double) << endl;<br><br>
+
+	return 0;<br><br>
+}<br><br>
+
+<div class="sec2"><div class="hdng1">Data Types Modifiers</div>
+As the name suggests, datatype modifiers are used with built-in data types to modify the length of data that a particular data type can hold. <br>
+
+<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191113121347/ModifiersInC.png" alt="">
+
+
+Data type modifiers available in C++ are:
+ 
+      <ul>
+        <li><span style="font-weight: 600;">Signed</span></li>
+    <li><span style="font-weight: 600;">Unsigned</span></li>
+    <li><span style="font-weight: 600;">  Short</span></li>
+    <li><span style="font-weight: 600;">  Long</span></li>
+
+      </ul>
+      <img src="Screenshot 2024-04-12 at 16-54-21 C Data Types - GeeksforGeeks.png" alt="">
+
+    </div>
+   
+    
+</div>
+    </div>
+</body>
+
+</html>

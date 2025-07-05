@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LearNexus | Registration</title>
+    <link rel="stylesheet" href="signup.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Registration</div>
+        <div class="content">
+            <!-- Registration form -->
+            <form id="signup" action="signupphp.php" method="post" onsubmit="return validateForm()">
+                <!-- Form fields for user details -->
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" placeholder="Enter your name" name="fname" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">D.O.B</span>
+                        <input type="date" name="date" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">E-mail Address</span>
+                        <input type="email" placeholder="Enter your email" name="mail" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Mobile Number</span>
+                        <input type="number" placeholder="Enter your number" name="phone" id="phone" required>
+                        <span id="phoneError" class="error"></span>
+                    </div>
+                  <div class="input-box">
+
+                           
+                        <span class="details">Password</span>
+                        
+                        <input type="password" placeholder="Enter your password" name="pwd" id="pwd" required>
+                      
+                            <div class="i_but">
+                            <a href="#">ℹ</a>
+                            <span class="tooltiptext">
+
+Password consist Atleast 8 characters(With Atleast one uppercase,lowercase,Numbers and Special Characters)<br>
+eg: LearNexus@123.</span>
+                        </div>
+
+                        <span id="pwdError" class="error"></span>
+                      
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Address</span>
+                        <input type="text" placeholder="Enter your address" name="adr" required>
+                    </div>
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1" value="Male">
+                    <input type="radio" name="gender" id="dot-2" value="Female">
+                    <input type="radio" name="gender" id="dot-3" value="Other">
+                    <span class="gender-title">Gender</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">Prefer not to say</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="button">
+                    <!-- Submit button -->
+                    <input type="submit" class="btn" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var phone = document.getElementById('phone').value.trim();
+            var pwd = document.getElementById('pwd').value.trim();
+
+            // Reset error messages
+            document.getElementById('phoneError').innerHTML = "";
+            document.getElementById('pwdError').innerHTML = "";
+
+            var isValid = true;
+
+            // Validate mobile number (should be 10 digits)
+            if (!(/^\d{10}$/.test(phone))) {
+                document.getElementById('phoneError').innerHTML = "Mobile number should be of 10 digits";
+                isValid = false;
+            }
+
+            // Validate password
+            if (!/(?=.*\d)(?=.*[a-z]) (?=.*[!@#$%^&*])(?=.*[A-Z]).{8,}/.test(pwd)) {
+                document.getElementById('pwdError').innerHTML = "Invalid password ";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+
+</html>

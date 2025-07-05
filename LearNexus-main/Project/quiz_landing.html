@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Test</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Inter&family=Poppins:wght@700;700&family=Roboto:wght@500;700&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins';
+        }
+        .h1 {
+            height: 60px;
+            right: 0px;
+            left: 0px;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 13px -3px rgba(128, 128, 128, 0.304);
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
+            z-index: 30;
+            background-color: #ffffff;
+            
+        }
+        #logo
+        {
+            height:300px;
+            width:300px;
+            position:relative;
+            top:-100px;
+            left:42%;
+            
+        }
+        .btn
+        {
+            position: absolute;
+            top:10px;
+            right:30px;
+            text-decoration: none;
+            color:rgb(252, 231, 42);
+            background-color:#2c7da0;
+            padding: 5px;
+            border-radius: 8px;
+            font-weight:600;
+            width:90px;
+            transition: color 0.3s ease;
+            font-size: 15px;
+            border:0px;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            /* min-height: 980px; */
+            background-color: #8BC6EC;
+            background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            width: 360px;
+            height: 300px;
+            background-color: white;
+            border-radius: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding: 20px;
+        }
+        .card2
+        {
+            width: 360px;
+            height: 300px;
+            background-color: white;
+            border-radius: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin:30px;
+            padding: 20px;
+        }
+
+        .card img{
+            height: 57%;
+            border-radius: 10px;
+        }
+
+        .card h2{
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .card p{
+            font-size: 1.2em;
+        }
+        .live
+        {
+            border:1px solid red;
+            border-radius: 10px;
+            padding:5px;
+            width:200px;
+            box-shadow: 0px 2px 4px -1px rgba(255, 0, 0, 0.813);
+        }
+        #rd
+        {
+            animation: bm 1.5s ease infinite;
+            position: relative;
+            display: inline-block;
+        }
+        @keyframes bm {
+            0%{
+                transform:scale(1px);
+                
+            }
+            50%
+            {
+                transform: scale(1.2);
+                
+            }
+            100%
+            {
+                transform: scale(1);
+            }
+         
+        }
+        h1
+        {
+            font-size: 20px;
+            height:0px;
+        }
+        .ques 
+        {
+            color:grey;
+            position:relative;
+            right:80px;
+        }
+        .time
+        {
+            color:grey;
+        }
+        .mrks
+        {
+            color:grey;
+            position:relative;
+            bottom:106px;
+            left:70px;
+        }
+        button
+        {
+            text-align: center;
+            height: 38px;
+            width: 170px;
+            font-size: 20px;
+            font-weight: 500;
+            border-radius: 4px;
+            color:rgb(229, 229, 229);
+            background-color:rgb(33, 59, 127) ;
+            box-sizing: border-box;
+            box-shadow: 0px 2px 4px 0px rgba(44, 44, 44, 0.598);
+            cursor: pointer;
+            border: none;
+            position:relative;
+            bottom:70px;
+            
+        }
+        button:hover
+        {
+            background-color: rgb(44, 80, 172);
+            transition: 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="h1"><img src="LearNexus-removebg-preview.png" alt="logo" id="logo"> <!--<a href="#"><button class="btn"> Home</button></a> --></div>
+    <div class="container">
+
+        <div class="card">
+             <div class="live"> <span id="rd">🔴</span> Live Test </div>
+            <h1> Web Development Quiz📄📜</h1>
+            <div class="ques">5 Questions</div>
+            <div class="time">Time: Unlimited</div>
+            <div class="mrks">5 Marks</div>
+           <a href="quiz2.html"> <button>Go</button> </a>
+
+            
+        </div>
+        <div class="card2">
+            <div class="live"> <span id="rd">🔴</span> Live Test </div>
+           <h1> Python Quiz📄📜</h1>
+           <div class="ques">5 Questions</div>
+           <div class="time">Time: Unlimited</div>
+           <div class="mrks">5 Marks</div>
+          <a href="#"> <button>Go</button> </a>
+
+           
+       </div>
+      
+
+    </div>
+
+
+</body>
+</html>

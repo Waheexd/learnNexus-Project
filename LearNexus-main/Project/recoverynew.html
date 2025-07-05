@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Recovery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: Gainsboro;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(255, 250, 240, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 100%;
+            max-width: 300px; /* Set maximum width */
+            height: auto;
+            max-height: 500px; /* Set maximum height */
+            overflow: hidden; /* Hide overflow */
+            backdrop-filter: blur(5px);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: DimGray;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: 280px;
+            width: 300px;
+        }
+
+        .form-group {
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 20px); /* Adjust width */
+            padding: 8px; /* Adjust padding */
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 14px; /* Adjust font size */
+            transition: border-color 0.3s ease;
+            margin-bottom: 1px;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: DodgerBlue;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 16px; /* Adjust padding */
+            background-color: RoyalBlue;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px; /* Adjust font size */
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: DodgerBlue;
+        }
+
+        .verify-link {
+            color: DarkGreen;
+            font-weight: bold;
+            text-decoration: none;
+            margin-left: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .verify-link:hover {
+            color: ForestGreen;
+        }
+
+        .columns {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .column {
+            width: 100%;
+        }
+
+        .form-group.otp { 
+            width: 100%; 
+            position: relative;
+        }
+
+        .form-group.verify-otp {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            right:0;
+            height: 90%;
+            padding-right: 30px;
+        }
+
+        .error-message {
+            color: red;
+            display: none;
+        }
+
+        .verified {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Recover your password?</h2>
+        <div class="image-container">
+            <img src="img3.avif" alt="">
+        </div>
+        <form id="password-recovery-form" method="post" action="updatepass.php">
+            <div class="columns">
+                <div class="column">
+                    <div class="form-group otp">
+                        <input type="text" id="otp" name="otp" placeholder="Enter OTP" required>
+                        <div class="form-group verify-otp">
+                            <a href="#" class="verify-link" id="verify-link" name="verify">Verify</a>
+                        </div>
+                        <div id="otpError" class="error-message" style="display: none;">OTP does not match</div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="form-group password">
+                        <input type="password" id="password" name="password" placeholder="Create New Password" required disabled>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="form-group confirm-password">
+                        <input type="text" id="confirm-password" name="confirm-password" placeholder="Confirm New Password" required disabled>
+                        <div id="passwordError" class="error-message" style="display: none;">Passwords do not match</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="confirm-btn" name="confirm">Confirm</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('verify-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            var otpInput = document.getElementById('otp').value;
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'validation.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    if (xhr.responseText.trim() === 'true') {
+                        document.getElementById('otpError').style.display = 'none';
+                        document.getElementById('verify-link').innerHTML = 'Verified &#10004;';
+                        document.getElementById('verify-link').classList.add('verified');
+
+                        // Enable password input fields
+                        document.getElementById('password').removeAttribute('disabled');
+                        document.getElementById('confirm-password').removeAttribute('disabled');
+                    } else {
+                        document.getElementById('otpError').style.display = 'block';
+                        document.getElementById('verify-link').textContent = 'Verify';
+                        document.getElementById('verify-link').classList.remove('verified');
+
+                        // Disable password input fields if OTP is not verified
+                        document.getElementById('password').setAttribute('disabled', true);
+                        document.getElementById('confirm-password').setAttribute('disabled', true);
+                    }
+                }
+            };
+            xhr.send('otp=' + encodeURIComponent(otpInput));
+        });
+
+        document.getElementById('confirm-btn').addEventListener('click', function(event) {
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirm-password').value;
+            if (password !== confirmPassword) {
+                event.preventDefault();
+                document.getElementById('passwordError').style.display = 'block';
+            } else {
+                document.getElementById('passwordError').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
